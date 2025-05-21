@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Mohanakrishnan">
+    <title>Mohanakrishnan Portfolio</title>
+    <link rel="icon" href="image/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3b4eb09e03.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+       <div class="container">
+        <nav>
+            <img src="image/logo.png" class="logo">
+            <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Java Developer</p>
+            <h1>Hi, I'm <span>Mohanakrishnan </span><br>from Chennai</h1>
+        </div>
+
+       </div> 
+    </div>
+<!-- ----------------about----------- -->
+ 
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Experienced and driven IT professional with a strong background in software development, specializing in Core Java, Spring Boot, Microservices, and MySQL. Skilled in resolving production issues, integrating third-party applications, and driving quick resolutions. Known for strong analytical skills, quick learning, and a commitment to continuous improvement. Adept at managing team escalations, ensuring process compliance, and maintaining operational clarity.</p>
+                    <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links"onclick="opentab('educations')">Educations</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Program Languages</span><br>Java,SpringBoot,Hibernate,Microservices</li>
+                        <li><span>Database</span><br>MySQL,Oracle </li>
+                        <li><span>Process Tools</span><br>Eclipse, Bitbucket, AWS, Putty, FileZilla, beyond compare, decompailer, Jboss deployment</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Senior Software Engineer</span><br>EXPLEO Software Solutions, Chennai (Aug 2023- Aug  2024)</li>
+                        <li><span>System Engineer</span><br>Crown Solution ,Chennai (Apr2022– Apr 2023) </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="educations">
+                    <ul>
+                        <li><span>2015-2019</span><br>B.E - Thangavelu Engineering college</li>
+                        <li><span>2015</span><br>HSC - Kumara Rajah Muthiah Hr.Sec.School</li>
+                        <li><span>2013</span><br>SSLC - Kumara Rajah Muthiah Hr.Sec.School</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- --------------------Portfolio----------------------- -->
+    <div id="Portfolio">
+        <div class="container">
+          <h1 class="sub-title">Projects Worked</h1>  
+          <div class="work-list">
+            <div class="work">
+                <img src="image/work1.png" >
+                <div class="layer">
+                    <h3>Client Dealer Payment API</h3>
+                    <p>The Client Dealer Payment API was developed to streamline and automate the disbursement of loan amounts directly into client accounts within Equitas Small Finance Bank. This system ensures seamless loan transactions, reducing manual intervention, enhancing security, and improving efficiency in loan disbursement.</p>
+                </div>
+            </div>
+            <div class="work">
+                <img src="image/work2.png" >
+                 <div class="layer">
+                    <h3>Cabin crew voyage Report(CCVR)</h3>
+                    <p>This voyage report provides a detailed account of cabin crew operations, observations, and events during the flight. It includes key information such as flight number, date, crew members, passenger interactions, safety and service issues, incidents (if any), and recommendations for improvement. The report aims to support operational transparency, ensure compliance with safety regulations, and enhance the overall passenger experience.</p>
+                </div>
+            </div>
+          </div>
+          <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+
+<!-- ------------------contact-------------------------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>      Mohanakrishnanmohan98@gmail.com</p>
+                <p><i class="fa-solid fa-phone-flip"></i>    9080336484</p>
+                <div class="social-icon">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://gitlab.com/users/sign_in/"><i class="fa-brands fa-gitlab"></i></i></a>
+                </div>
+                <a href="image/mohanakrishnan.pdf" download class="btn btn2">Download CV</a>
+            </div>
+
+            <div class="contact-right">
+                <form  name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message" ></textarea>
+                    <button type="submit" class="btn btn2">SUBMIT</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © MohanaKrishnan 2025. All rights reserved <i class="fa-solid fa-shield-heart"></i>.</p>
+    </div>
+</div>
+
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+             for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu =document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+
+        }
+        function closemenu(){
+            sidemenu.style.right="-200";
+            
+        }
+    </script>
+    <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyeB6k51nzduthvZv63ec0wBcboVH6nKewvU6TKVe5eNgNkhzvq3XYQsuOin5x-O6lI/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg =document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML ="message sent successfully"
+        setTimeout(function(){msg.innerHTML=""},3000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
